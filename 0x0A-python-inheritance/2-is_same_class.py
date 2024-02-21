@@ -1,4 +1,5 @@
-. Python - Inheritance, task 2 """
+#!/usr/bin/python3
+""" 0x0A. Python - Inheritance, task 2 """
 
 
 def is_same_class(obj, a_class):
