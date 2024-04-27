@@ -1,0 +1,20 @@
+# uncompyle6 version 3.5.0
+# Python bytecode 3.8 (3413)
+# Decompiled from: Python 3.7.2 (default, Dec 29 2018, 06:19:36) 
+# [GCC 7.3.0]
+# Embedded file name: /root/alx-higher_level_programming/0x0F-python-object_relational_mapping/model_state.py
+# Size of source mod 2**32: 525 bytes
+"""
+Write a python file that contains the class definition of a State
+and an instance Base.
+"""
+from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy.ext.declarative import declarative_base
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
+
+class State(Base):
+    r"""'\n    Class with attributes of a state.\n    '"""
+    __tablename__ = 'states'
+    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    name = Column((String(128)), nullable=False)
